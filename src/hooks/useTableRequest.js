@@ -35,6 +35,7 @@ export default function useTableRequset(query, api) {
     }, [])
     /* 改变分页，重新请求数据 */
     useEffect(() => {
+      console.log("shoucixuanran123",query);
       fisrtRequest.current && getList({
         ...query,
         ...pageOptions
@@ -42,6 +43,7 @@ export default function useTableRequset(query, api) {
     }, [pageOptions])
     /* 改变查询条件。重新请求数据 */
     useEffect(() => {
+      console.log("shoucixuanran",query);
       getList({
         ...query,
         ...pageOptions,
